@@ -1,0 +1,194 @@
+.lists > h2{
+	text-align: center;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	display: block;
+	width: 20%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+#priority{
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	position: relative;
+
+	h1{
+		text-align: center;
+		color: white;
+		font-family: 'Roboto', sans-serif;
+		font-size: 30px;
+		margin-top: 40px;
+		display: block;
+	}
+
+
+	#emails-list{
+		width: 40vw;
+		height: auto;
+		@include position(absolute, 50% null null 5vw);
+		@include transform(translateY(-50%));
+		list-style: none;
+		background: rgb(25, 40, 62);
+		box-shadow: 10px 10px 20px rgba(10,10,10,0.3);
+		font-family: 'Roboto', sans-serif;
+
+		li.email{
+			width:100%;
+			padding:30px 20px;
+			color: rgb(31, 52, 82);
+			background: rgb(25, 40, 62);
+			margin-bottom: 1px;
+			cursor: pointer;
+			font-family: 'Roboto', sans-serif;
+
+			&:last-of-type{
+				margin-bottom:0;
+			}
+
+			&.title{
+				color: white!important;
+			}
+
+			div.hint{
+				// display: inline-block;
+				width: 80%;
+				float: right;
+
+
+				h2.email-subject{
+					font-family: 'Roboto', sans-serif;
+				}
+				p{
+					font-family: 'Roboto', sans-serif;
+
+					&.email-sender{
+						font-weight: bolder;
+						padding: 6px 0;
+					}
+				}	
+			}
+
+			.number{
+				display: inline-block;
+				width: 8%;
+				font-size: 50px;
+				font-weight: bold;
+			}
+			&.active{
+				background: #1D7AFF!important;
+				color: white!important;
+			}
+
+			// &:not(.title){
+			// 	&:hover{
+			// 		background: #1D7AFF!important;
+			// 		color: white!important;
+			// 	}
+			// }
+		}
+	}
+	#calendar-list{
+		width: 40vw;
+		@include position(absolute, 50% 5vw null null);
+		@include transform(translateY(-50%));
+		list-style: none;
+		box-shadow: 10px 10px 20px rgba(10,10,10,0.3);
+		font-family: 'Roboto', sans-serif;
+		background: rgb(25, 40, 62);
+
+		li{
+			width:100%;
+			padding:30px 20px;
+			color: rgb(31, 52, 82);
+			background: rgb(25, 40, 62);
+			margin-bottom: 1px;
+			cursor: pointer;
+			font-family: 'Roboto', sans-serif;
+
+			&:last-of-type{
+				margin-bottom:0;
+			}
+
+			&.title{
+				color: white!important;
+			}
+
+			div.hint{
+				// display: inline-block;
+				width: 80%;
+				float: right;
+
+
+				h2.email-subject{
+					font-family: 'Roboto', sans-serif;
+				}
+				p{
+					font-family: 'Roboto', sans-serif;
+
+					&.email-sender{
+						font-weight: bolder;
+						padding: 6px 0;
+					}
+				}	
+			}
+
+			.number{
+				display: inline-block;
+				width: 8%;
+				font-size: 50px;
+				font-weight: bold;
+			}
+			&.active{
+				background: #1D7AFF!important;
+				color: white!important;
+			}
+			// &:not(.title){
+			// 	&:hover{
+			// 		background: #1D7AFF!important;
+			// 		color: white!important;
+			// 	}
+			// }
+		}
+	}
+	#full-event, #full-email{
+		width: 60vw;
+		height: 80vh;
+		@include position(absolute, 50% null null 50%);
+		@include transform(translate(-50%,-50%));
+		z-index: -10000;
+		background: white;
+		box-shadow: 10px 10px 20px rgba(0,0,0,0.05);
+		opacity: 0;
+
+		h2.email-subject{
+			padding:10px 30px 0 30px;
+			color: white;
+			background: #1D7AFF;
+			font-family: 'Roboto', sans-serif;
+		}
+		p{
+			font-family: 'Roboto', sans-serif;
+
+			&.email-sender{
+				padding:0px 30px 10px 30px;
+				margin-top:-1px;
+				color: white;
+				background: #1D7AFF;
+				font-weight: bolder;
+			}
+		}
+		.body{
+			padding: 50px;
+			p{
+				color: #555;
+			}
+		}
+
+		&.active{
+			@include transform(translate(-50%,-50%));
+			height: 70vh;
+		}
+	}
+}

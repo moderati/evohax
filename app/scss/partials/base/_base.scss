@@ -1,0 +1,107 @@
+@import "../components/variables";
+
+body{
+	margin:0;
+	overflow: hidden;
+    // background: #f2f2f2;
+	background: rgba(0,0,0,0.85);
+    // background-image: url('../img/bg1.jpg');
+    &:before{
+        content: '';
+        display: block;
+        @include position(absolute, 0 0 0 0);
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.3);
+    } 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+
+section#start-up{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    .container{
+        @include position(absolute, 50% null null 50%);
+        @include transform(translate(-50%,-50%));
+        text-align: center;
+        font-family: 'Roboto';
+
+        .welcome{
+            font-size: 50px;
+            width: 90vw;
+            color: white;
+        }
+        .motivation{
+            font-size: 35px;
+            font-weight: normal;
+            color: white;
+            margin-top: 10px;
+        }
+        .quote{
+            color: white;
+            // width: 280px;
+            margin: 0 auto;
+            margin-top: 50px;
+            span{
+                vertical-align: middle;
+            }
+        }
+        button{
+            @include appearance(none);
+            width: 300px;
+            height: 50px;
+            margin-top: 30px;
+            border-radius: 30px;
+            box-shadow: 0;
+            border: 0;            
+            // border: 2px solid white;            
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            // background: transparent;
+            background-color: #1783E5;
+            position: relative;
+            cursor: pointer;
+            outline: 0;
+
+            span.text{
+                // display: inline-block;
+                width: 250px;
+                // @include position(absolute, 50% null null 0);
+                // @include transform(translateY(-50%));
+                text-transform: uppercase;
+            }
+            span.arrow{
+                height: 100%;
+                // display: inline-block;
+                display: none;
+                width: 50px;
+                background-color: #1783E5;
+                border-left: 2px solid white;
+                @include position(absolute, 0 0 null null);
+                border-radius: 0px 50px 50px 0px;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: middle;
+                    @include position(absolute, 50% null null 50%);
+                    @include transform(translate(-50%,-50%));
+                }
+            }
+        }
+    }
+
+}

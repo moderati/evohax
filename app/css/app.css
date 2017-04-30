@@ -1,0 +1,260 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.85); }
+  body:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3); }
+
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent; }
+
+section#start-up {
+  position: relative;
+  width: 100vw;
+  height: 100vh; }
+  section#start-up .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Roboto'; }
+    section#start-up .container .welcome {
+      font-size: 50px;
+      width: 90vw;
+      color: white; }
+    section#start-up .container .motivation {
+      font-size: 35px;
+      font-weight: normal;
+      color: white;
+      margin-top: 10px; }
+    section#start-up .container .quote {
+      color: white;
+      margin: 0 auto;
+      margin-top: 50px; }
+      section#start-up .container .quote span {
+        vertical-align: middle; }
+    section#start-up .container button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      width: 300px;
+      height: 50px;
+      margin-top: 30px;
+      border-radius: 30px;
+      box-shadow: 0;
+      border: 0;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #1783E5;
+      position: relative;
+      cursor: pointer;
+      outline: 0; }
+      section#start-up .container button span.text {
+        width: 250px;
+        text-transform: uppercase; }
+      section#start-up .container button span.arrow {
+        height: 100%;
+        display: none;
+        width: 50px;
+        background-color: #1783E5;
+        border-left: 2px solid white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0px 50px 50px 0px; }
+        section#start-up .container button span.arrow img {
+          width: 20px;
+          height: 20px;
+          vertical-align: middle;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.lists > h2 {
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 20px; }
+
+#priority {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  position: relative; }
+  #priority h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    margin-top: 40px;
+    display: block; }
+  #priority #emails-list {
+    width: 40vw;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 5vw;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    list-style: none;
+    background: #19283e;
+    box-shadow: 10px 10px 20px rgba(10, 10, 10, 0.3);
+    font-family: 'Roboto', sans-serif; }
+    #priority #emails-list li.email {
+      width: 100%;
+      padding: 30px 20px;
+      color: #1f3452;
+      background: #19283e;
+      margin-bottom: 1px;
+      cursor: pointer;
+      font-family: 'Roboto', sans-serif; }
+      #priority #emails-list li.email:last-of-type {
+        margin-bottom: 0; }
+      #priority #emails-list li.email.title {
+        color: white !important; }
+      #priority #emails-list li.email div.hint {
+        width: 80%;
+        float: right; }
+        #priority #emails-list li.email div.hint h2.email-subject {
+          font-family: 'Roboto', sans-serif; }
+        #priority #emails-list li.email div.hint p {
+          font-family: 'Roboto', sans-serif; }
+          #priority #emails-list li.email div.hint p.email-sender {
+            font-weight: bolder;
+            padding: 6px 0; }
+      #priority #emails-list li.email .number {
+        display: inline-block;
+        width: 8%;
+        font-size: 50px;
+        font-weight: bold; }
+      #priority #emails-list li.email.active {
+        background: #1D7AFF !important;
+        color: white !important; }
+  #priority #calendar-list {
+    width: 40vw;
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    list-style: none;
+    box-shadow: 10px 10px 20px rgba(10, 10, 10, 0.3);
+    font-family: 'Roboto', sans-serif;
+    background: #19283e; }
+    #priority #calendar-list li {
+      width: 100%;
+      padding: 30px 20px;
+      color: #1f3452;
+      background: #19283e;
+      margin-bottom: 1px;
+      cursor: pointer;
+      font-family: 'Roboto', sans-serif; }
+      #priority #calendar-list li:last-of-type {
+        margin-bottom: 0; }
+      #priority #calendar-list li.title {
+        color: white !important; }
+      #priority #calendar-list li div.hint {
+        width: 80%;
+        float: right; }
+        #priority #calendar-list li div.hint h2.email-subject {
+          font-family: 'Roboto', sans-serif; }
+        #priority #calendar-list li div.hint p {
+          font-family: 'Roboto', sans-serif; }
+          #priority #calendar-list li div.hint p.email-sender {
+            font-weight: bolder;
+            padding: 6px 0; }
+      #priority #calendar-list li .number {
+        display: inline-block;
+        width: 8%;
+        font-size: 50px;
+        font-weight: bold; }
+      #priority #calendar-list li.active {
+        background: #1D7AFF !important;
+        color: white !important; }
+  #priority #full-event, #priority #full-email {
+    width: 60vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -10000;
+    background: white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+    opacity: 0; }
+    #priority #full-event h2.email-subject, #priority #full-email h2.email-subject {
+      padding: 10px 30px 0 30px;
+      color: white;
+      background: #1D7AFF;
+      font-family: 'Roboto', sans-serif; }
+    #priority #full-event p, #priority #full-email p {
+      font-family: 'Roboto', sans-serif; }
+      #priority #full-event p.email-sender, #priority #full-email p.email-sender {
+        padding: 0px 30px 10px 30px;
+        margin-top: -1px;
+        color: white;
+        background: #1D7AFF;
+        font-weight: bolder; }
+    #priority #full-event .body, #priority #full-email .body {
+      padding: 50px; }
+      #priority #full-event .body p, #priority #full-email .body p {
+        color: #555; }
+    #priority #full-event.active, #priority #full-email.active {
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      height: 70vh; }
+
+/*# sourceMappingURL=app.css.map */
