@@ -169,55 +169,25 @@ section#start-up {
     border-radius: 10px;
     margin: 30px;
     margin-top: 50px;
-    padding: 20px;
-    overflow-y: auto; }
-    #brief .tasks-box .tasks .header {
-      margin-bottom: 15px; }
-      #brief .tasks-box .tasks .header h3 {
-        color: white;
-        font-size: 25px;
-        display: inline-block; }
-        #brief .tasks-box .tasks .header h3 img:first-of-type {
-          margin-right: 10px;
-          width: 25px;
-          height: 25px;
-          vertical-align: middle; }
-      #brief .tasks-box .tasks .header #add-task {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        -ms-appearance: none;
-        -o-appearance: none;
-        appearance: none;
-        width: 35px;
-        height: 35px;
-        margin-left: 20px;
-        border: 0;
-        background: transparent;
-        display: inline-block;
-        vertical-align: middle; }
-        #brief .tasks-box .tasks .header #add-task img {
-          width: 100%;
-          height: 100%; }
-    #brief .tasks-box .tasks .task {
-      cursor: pointer;
-      -webkit-transition: opacity 0.25s ease-in-out;
-      -moz-transition: opacity 0.25s ease-in-out;
-      transition: opacity 0.25s ease-in-out; }
-      #brief .tasks-box .tasks .task.completed {
-        opacity: .2; }
-      #brief .tasks-box .tasks .task img {
-        width: 35px;
-        height: 35px;
-        display: inline-block;
-        vertical-align: top; }
-      #brief .tasks-box .tasks .task span {
-        display: inline-block;
-        vertical-align: top;
-        width: 85%;
-        color: white;
-        font-size: 18px;
-        margin-left: 10px;
-        margin-bottom: 10px; }
+    padding: 20px; }
+    #brief .tasks-box .tasks .header h3 {
+      color: white;
+      font-size: 20px; }
+      #brief .tasks-box .tasks .header h3 img:first-of-type {
+        margin-left: 10px; }
+    #brief .tasks-box .tasks .task img {
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      vertical-align: top; }
+    #brief .tasks-box .tasks .task span {
+      display: inline-block;
+      vertical-align: top;
+      width: 85%;
+      color: white;
+      font-size: 18px;
+      margin-left: 10px;
+      margin-bottom: 10px; }
   #brief .tasks-box .tools {
     width: 40%;
     float: right;
@@ -230,43 +200,21 @@ section#start-up {
     padding: 20px; }
     #brief .tasks-box .tools .header h3 {
       color: white;
-      font-size: 25px; }
-      #brief .tasks-box .tools .header h3 img:first-of-type {
-        margin-right: 10px;
-        width: 35px;
-        height: 35px;
-        vertical-align: middle; }
-    #brief .tasks-box .tools .apps-containers {
-      margin-top: 30px; }
-      #brief .tasks-box .tools .apps-containers .app {
-        width: 60px;
-        height: auto;
-        margin: 0 10px 0 0;
-        cursor: pointer; }
-    #brief .tasks-box .tools p.relax {
-      display: block;
-      text-align: center;
-      margin-top: 50px;
+      font-size: 20px;
+      margin-left: 10px; }
+    #brief .tasks-box .tools .task img {
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      vertical-align: top; }
+    #brief .tasks-box .tools .task span {
+      display: inline-block;
+      vertical-align: top;
+      width: 85%;
       color: white;
-      padding-top: 20px;
-      border-top: 1px solid #1D7AFF; }
-    #brief .tasks-box .tools button#play {
-      width: 150px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      margin-top: 20px;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -ms-appearance: none;
-      -o-appearance: none;
-      appearance: none;
-      background: none;
-      border: 0;
-      cursor: pointer; }
-      #brief .tasks-box .tools button#play img {
-        width: 100%;
-        height: 100%; }
+      font-size: 18px;
+      margin-left: 10px;
+      margin-bottom: 10px; }
   #brief .tasks-box li.search {
     width: 100%;
     padding: 0;

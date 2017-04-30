@@ -8,7 +8,223 @@
 	margin: 0 auto;
 	margin-top: 20px;
 }
-#priority{
+#brief{
+	h2{
+		text-align: center;
+		color: white;
+		font-family: 'Roboto', sans-serif;
+		font-size: 18px;
+		display: block;
+		width: 20%;
+		margin: 0 auto;
+		margin-top: 20px;	
+	}
+	.tasks-box{
+		width: 90vw;
+		height: 70vh;
+		margin: 50px auto;
+		border: 2px solid white;
+		border-radius: 10px;
+
+		.banner{
+			padding: 20px;
+			background: #1D7AFF;
+			border-radius: 10px 10px 0 0px;
+			color: white;
+
+			.date{
+				width: 10%;
+				height: 100%;
+				display: inline-block;
+				vertical-align: middle;
+				.month{
+					display: block;
+					text-align: center;
+					font-weight: bold;
+				}
+				.day{
+					display: block;
+					text-align: center;
+					font-size: 50px;
+				}
+			}
+			p{
+				width:80%;
+				display: inline-block;
+				padding-left:30px;
+				vertical-align: middle;
+				font-size: 20px;
+			}
+
+		}
+
+		.tasks{
+			width: 40%;
+			height: 400px;
+			float: left;
+			list-style: none;
+			border: 2px solid #1D7AFF;
+			border-radius: 10px;
+			margin: 30px;
+			margin-top: 50px;
+			padding: 20px;
+			overflow-y: auto;
+			.header{
+				margin-bottom: 15px;
+				h3{
+					color: white;
+					font-size: 25px;
+					display: inline-block;
+					img{
+						&:first-of-type{
+							margin-right: 10px;
+							width: 25px;
+							height: 25px;
+							vertical-align: middle;
+						}
+					}
+				}
+				#add-task{
+					@include appearance(none);
+					width: 35px;
+					height:35px;
+					margin-left: 20px;
+					border: 0;
+					background: transparent;
+					display: inline-block;
+					vertical-align: middle;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+			.task{
+				cursor: pointer;
+				@include transition(opacity .25s ease-in-out);
+				&.completed{
+					opacity: .2;
+				}
+				img{
+					width: 35px;
+					height: 35px;
+					display: inline-block;
+					vertical-align:top;
+				}
+				span{
+					display: inline-block;
+					vertical-align:top;
+					width: 85%;
+					color: white;
+					font-size: 18px;
+					margin-left: 10px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		.tools{
+			width: 40%;
+			float: right;
+			height: 400px;
+			list-style: none;
+			border: 2px solid #1D7AFF;
+			border-radius: 10px;
+			margin: 30px;
+			margin-top: 50px;
+			padding: 20px;
+			.header{
+				h3{
+					color: white;
+					font-size: 25px;
+					img{
+						&:first-of-type{
+							margin-right: 10px;
+							width:35px;
+							height: 35px;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+			.apps-containers{
+				margin-top: 30px;
+				.app{
+					width: 60px;
+					height: auto;
+					margin: 0 10px 0 0;
+					cursor: pointer;
+				}
+			}
+			p.relax{
+				display: block;
+				text-align: center;
+				margin-top: 50px;
+				color: white;
+				padding-top: 20px;
+				border-top: 1px solid #1D7AFF;
+			}
+			button#play{
+				width: 150px;
+				height: auto;
+				display: block;
+				margin: 0 auto;
+				margin-top: 20px;
+				@include appearance(none);
+				background: none;
+				border: 0;
+				cursor: pointer;
+
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		li.search{
+			width:100%;
+			padding:0;
+			color: white;
+			background: rgb(25, 40, 62);
+			margin-bottom: 1px;
+			cursor: text;
+			font-family: 'Roboto', sans-serif;
+			font-size: 20px;
+			position:relative;
+			border: 1px solid rgb(25, 40, 62);
+			border-radius: 10px;
+			margin-top: 50px;
+
+			input{
+				width:100%;
+				height:100%;
+				padding:30px 20px 30px 60px;
+				color: white;
+				background: rgb(25, 40, 62);
+				margin-bottom: 1px;
+				cursor: text;
+				font-family: 'Roboto', sans-serif;
+				font-size: 20px;
+				border:0;
+				border-radius: 10px;
+
+
+
+			}
+
+			img{
+				width: 30px;
+				height: 30px;
+				vertical-align: middle;
+				@include position(absolute, 28px 0 0 20px);
+			}
+			span{
+				vertical-align: middle;
+				padding-left: 20px;
+			}
+		}
+	}
+}
+#brief, #priority{
 	width: 100vw;
 	height: 100vh;
 	margin: 0;

@@ -137,13 +137,6 @@ $(document).ready(function() {
 	$('#work').on('click', function(){
 		TweenMax.to('#priority', .35, {alpha:0, y: -100, ease:Power1.easeOut});
 		TweenMax.fromTo('#brief', .35, {alpha:0, y:'-180%'}, {alpha:1, y:'-205%', ease:Power1.easeOut});
-	});
-
-	$('.task').on('click', function(){
-		$(this).addClass('completed');
-	});
-	$('#add-task').on('click', function(){
-		$('.task:eq(0)').before('<li class="task"><img src="app/img/complete.svg" alt=""><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></li>');
-	});
+	})
 
 });
