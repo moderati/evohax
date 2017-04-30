@@ -1,7 +1,9 @@
 $(document).ready(function() {
 	var tl = new TimelineMax();
 
-	tl.staggerFromTo('.stagg1', .35, {alpha:0, y: 100}, {alpha:1, y:80}, .5, "+=1");
+	tl.staggerFromTo('.start', .35, {alpha:0, y: 200}, {alpha:1, y:180, ease:Power1.easeInOut}, 1);
+	tl.staggerFromTo('.start', .35, {alpha:1, y:180}, {alpha:0, y:170, ease:Power1.easeInOut}, .2, "+=2");
+	tl.staggerFromTo('.stagg1', .35, {alpha:0, y: 100}, {alpha:1, y:80}, .5, "+=.5");
 	tl.to('.stagg1', .35,{y:0, ease:Power1.easeOut}, "+=.5");
 	tl.staggerFromTo('.stagg2', .35, {alpha:0, y: 20}, {alpha:1, y:0, ease:Power1.easeInOut}, .4,"-=.35");
 
@@ -101,5 +103,39 @@ $(document).ready(function() {
 			},300);
 		};
 	});
+
+	function checkEmailsComplete(){
+		if($('#full-email').css('opacity') >= 1 && $('li.email:eq(3)').hasClass('active')){
+			clearInterval(checkEC);
+			setTimeout(function(){
+				$('#emails-list > .tasks-complete').addClass('active');
+			},800);
+		};
+	}
+	var checkEC = setInterval(checkEmailsComplete, 50);
+
+	function checkEventsComplete(){
+		if($('#full-event').css('opacity') >= 1 && $('li.event:eq(3)').hasClass('active')){
+			clearInterval(checkEvC);
+			setTimeout(function(){
+				$('#calendar-list > .tasks-complete').addClass('active');
+			},800);
+		};
+	}
+	var checkEvC = setInterval(checkEventsComplete, 50);
+
+	function checkAllComplete(){
+		if($('#calendar-list > .tasks-complete').hasClass('active') && $('#emails-list > .tasks-complete').hasClass('active')){
+			clearInterval(checkAC);
+			setTimeout(function(){
+				$('#work').addClass('active');
+			},450);
+		};
+	}
+	var checkAC = setInterval(checkAllComplete, 50);
+
+	$('#work').on('click', function(){
+		TweenMax.to('#priority', .35, {alpha:0, y: -100, ease:Power1.easeOut});
+	})
 
 });
