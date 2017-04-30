@@ -162,6 +162,8 @@ $(document).ready(function() {
 			setTimeout(function(){
 				$('#emails-list > .tasks-complete').addClass('active');
 			},800);
+
+			$('li.email').removeAttr('tabindex');
 		};
 	}
 	var checkEC = setInterval(checkEmailsComplete, 50);
@@ -172,7 +174,9 @@ $(document).ready(function() {
 			setTimeout(function(){
 				$('#calendar-list > .tasks-complete').addClass('active');
 			},800);
+			$('li.event').removeAttr('tabindex');
 		};
+
 	}
 	var checkEvC = setInterval(checkEventsComplete, 50);
 
