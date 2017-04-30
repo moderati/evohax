@@ -4,15 +4,17 @@
 	<meta charset="UTF-8">
 	<title>Spotlight OS</title>
 	<link rel="stylesheet" href="app/css/app.css">
+	<style id="focusoutline"></style>
 </head>
-<body>
+<body onmousedown="document.getElementById('focusoutline').innerHTML='a:focus, button:focus {outline:none}';" onkeydown="document.getElementById('focusoutline').innerHTML='a:focus, button:focus, span:focus {\
+        outline: -webkit-focus-ring-color auto 10px !important;}'">
 	
 	<section id="start-up">
 		<div class="container">
 			<h1 class="welcome stagg1">Welcome to Spotlight, Chris!</h1>
 			<p class="motivation stagg1">Today is another great day!</p>
 			<p class="quote stagg2"><span>"</span>When you're hitting a wall, focus on one brick.<span>"</span><br><b>-Tyler Perry</b></p>
-			<button class="stagg2">
+			<button tab-index="0" class="stagg2">
 				<span class="text">Get Started </span>
 				<span class="arrow"><img src="app/img/arrow.svg" alt="arrow"></span>
 			</button>	
@@ -27,21 +29,21 @@
 				<li class="email title">
 					<h2>We've selected your most<br>important emails&nbsp;below.</h2>
 				</li>
-				<li class="email active">
+				<li class="email active" tabindex="0">
 					<div class="number">01</div>
 					<div class="hint">
 						<h2 class="email-subject">Culpa iure sit.</h2>
 						<p class="hinted-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam omnis perferendis illo.</p>
 					</div>
 				</li>
-				<li class="email">
+				<li class="email" tabindex="0">
 					<div class="number">02</div>
 					<div class="hint">
 						<h2 class="email-subject">Culpa iure sit.</h2>
 						<p class="hinted-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam omnis perferendis illo.</p>
 					</div>
 				</li>
-				<li class="email">
+				<li class="email" tabindex="0">
 					<div class="number">03</div>
 					<div class="hint">
 						<h2 class="email-subject">Culpa iure sit.</h2>
@@ -53,21 +55,21 @@
 				<li class="event title">
 					<h2>We've selected your most<br>important events&nbsp;below.</h2>
 				</li>
-				<li class="event active">
+				<li class="event active" tabindex="0">
 					<div class="number">01</div>
 					<div class="hint">
 						<h2 class="event-subject">Culpa iure sit.</h2>
 						<p class="hinted-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam omnis perferendis illo.</p>
 					</div>
 				</li>
-				<li class="event">
+				<li class="event" tabindex="0">
 					<div class="number">02</div>
 					<div class="hint">
 						<h2 class="event-subject">Culpa iure sit.</h2>
 						<p class="hinted-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam omnis perferendis illo.</p>
 					</div>
 				</li>
-				<li class="event">
+				<li class="event" tabindex="0">
 					<div class="number">03</div>
 					<div class="hint">
 						<h2 class="email-subject">Culpa iure sit.</h2>
