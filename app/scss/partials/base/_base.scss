@@ -6,6 +6,7 @@ body{
     // background: #f2f2f2;
 	background: rgba(0,0,0,0.85);
     // background-image: url('../img/bg1.jpg');
+    font-family: 'Roboto', sans-serif;
     &:before{
         content: '';
         display: block;
@@ -43,7 +44,7 @@ section#start-up{
         @include position(absolute, 50% null null 50%);
         @include transform(translate(-50%,-50%));
         text-align: center;
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
 
         .welcome{
             font-size: 50px;

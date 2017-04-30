@@ -51,59 +51,7 @@ $(document).ready(function() {
 		};
 	});
 
-	// Button listeners
-
-	$('li.email:eq(1)').on('keydown', function(e){
-		if (e.keyCode == 13) { 	
-			if($('#full-email').css('opacity') < 1 && $('#full-event').css('opacity') < 1){
-				TweenMax.fromTo('#full-email', .35, {alpha:0, x:'-50%', y:'-40%', zIndex:10000}, {alpha:1, x:'-50%', y:'-50%', ease:Power1.easeOut});
-				TweenMax.to('.lists', .35, {alpha:.05, ease:Power1.easeOut});	
-			};
-		}
-	});
-	$('li.email:eq(2)').on('keydown', function(e){
-		if (e.keyCode == 13) { 	
-			if($('#full-email').css('opacity') < 1 && $('#full-event').css('opacity') < 1){
-				TweenMax.fromTo('#full-email', .35, {alpha:0, x:'-50%', y:'-40%', zIndex:10000}, {alpha:1, x:'-50%', y:'-50%', ease:Power1.easeOut});
-				TweenMax.to('.lists', .35, {alpha:.05, ease:Power1.easeOut});	
-			};
-		}
-	});
-	$('li.email:eq(3)').on('keydown', function(e){
-		if (e.keyCode == 13) { 	
-			if($('#full-email').css('opacity') < 1 && $('#full-event').css('opacity') < 1){
-				TweenMax.fromTo('#full-email', .35, {alpha:0, x:'-50%', y:'-40%', zIndex:10000}, {alpha:1, x:'-50%', y:'-50%', ease:Power1.easeOut});
-				TweenMax.to('.lists', .35, {alpha:.05, ease:Power1.easeOut});	
-			};
-		}
-	});
-	$('li.event:eq(1)').on('keydown', function(e){
-		if (e.keyCode == 13) { 	
-			if($('#full-email').css('opacity') < 1 && $('#full-event').css('opacity') < 1){
-				TweenMax.fromTo('#full-event', .35, {alpha:0, x:'-50%', y:'-40%', zIndex:10000}, {alpha:1, x:'-50%', y:'-50%', ease:Power1.easeOut});
-				TweenMax.to('.lists', .35, {alpha:.05, ease:Power1.easeOut});
-			};
-		}
-	});
-	$('li.event:eq(2)').on('keydown', function(e){
-		if (e.keyCode == 13) { 	
-			if($('#full-email').css('opacity') < 1 && $('#full-event').css('opacity') < 1){
-				TweenMax.fromTo('#full-event', .35, {alpha:0, x:'-50%', y:'-40%', zIndex:10000}, {alpha:1, x:'-50%', y:'-50%', ease:Power1.easeOut});
-				TweenMax.to('.lists', .35, {alpha:.05, ease:Power1.easeOut});
-			};
-		}
-	});
-	$('li.event:eq(3)').on('keydown', function(e){
-		if (e.keyCode == 13) { 	
-			if($('#full-email').css('opacity') < 1 && $('#full-event').css('opacity') < 1){
-				TweenMax.fromTo('#full-event', .35, {alpha:0, x:'-50%', y:'-40%', zIndex:10000}, {alpha:1, x:'-50%', y:'-50%', ease:Power1.easeOut});
-				TweenMax.to('.lists', .35, {alpha:.05, ease:Power1.easeOut});
-			};
-		}
-	});
-
-
-	$('#priority').on('click keydown',function(){
+	$('#priority').on('click',function(){
 		if($('#full-email').css('opacity') >= 1 && $('li.email:eq(3)').hasClass('active')){
 			TweenMax.fromTo('#full-email', .35, {alpha:1, x:'-50%', y:'-50%'}, {alpha:0, x:'-50%', y:'-40%', zIndex:-10000, ease:Power1.easeOut});
 			TweenMax.to('.lists', .35, {alpha:1, ease:Power1.easeOut, delay:.35});
@@ -162,8 +110,6 @@ $(document).ready(function() {
 			setTimeout(function(){
 				$('#emails-list > .tasks-complete').addClass('active');
 			},800);
-
-			$('li.email').removeAttr('tabindex');
 		};
 	}
 	var checkEC = setInterval(checkEmailsComplete, 50);
@@ -174,9 +120,7 @@ $(document).ready(function() {
 			setTimeout(function(){
 				$('#calendar-list > .tasks-complete').addClass('active');
 			},800);
-			$('li.event').removeAttr('tabindex');
 		};
-
 	}
 	var checkEvC = setInterval(checkEventsComplete, 50);
 
@@ -193,13 +137,6 @@ $(document).ready(function() {
 	$('#work').on('click', function(){
 		TweenMax.to('#priority', .35, {alpha:0, y: -100, ease:Power1.easeOut});
 		TweenMax.fromTo('#brief', .35, {alpha:0, y:'-180%'}, {alpha:1, y:'-205%', ease:Power1.easeOut});
-	});
-
-	$('.task').on('click', function(){
-		$(this).addClass('completed');
-	});
-	$('#add-task').on('click', function(){
-		$('.task:eq(0)').before('<li class="task"><img src="app/img/complete.svg" alt=""><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></li>');
-	});
+	})
 
 });
